@@ -1,0 +1,7 @@
+<PROMPTCONFIG>
+temperature = 0
+max_token = 1000
+</PROMPTCONFIG>
+<PROMPT>
+HelloWorld. This is a prompt.
+</PROMPT>
