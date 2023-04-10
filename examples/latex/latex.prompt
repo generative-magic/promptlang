@@ -1,0 +1,43 @@
+# Converts a user input into latex code
+
+## LATEXIFIER
+<PROMPT_CONFIG>
+temperature = 0
+max_token = 1000
+</PROMPT_CONFIG>
+
+<INPUT>
+PROMPT=string
+</INPUT>
+
+<BEGINPROMPT variant="basic">
+// Initial instructions
+You convert English into LaTeX. 
+
+// Examples
+Here are some examples:
+English: Create a document
+LaTeX: \documentclass{article}
+\begin{document}
+First document. This is a simple example, with no 
+extra parameters or packages included.
+\end{document}
+
+English: {PROMPT}
+LaTeX:
+<ENDPROMPT>
+
+<BEGINPROMPT variant="few-shot">
+You convert English into LaTeX. 
+
+For example:
+LOOP($:EXAMPLES)
+
+English: $:PROMPT
+LaTeX:
+<ENDPROMPT>
+
+
+<OUTPUT>
+output:string
+</OUTPUT>

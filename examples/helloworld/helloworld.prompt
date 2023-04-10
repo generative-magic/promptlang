@@ -1,0 +1,8 @@
+<PROMPTCONFIG>
+temperature = 0
+max_token = 1000
+</PROMPTCONFIG>
+
+<PROMPT>
+HelloWorld. Write a website using HTML and CSS that says hello world.
+</PROMPT>
